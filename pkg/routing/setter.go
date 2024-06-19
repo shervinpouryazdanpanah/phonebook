@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"phonebook/internal/modules/phone"
 	"phonebook/internal/modules/user"
-	config "phonebook/pkg/config"
+	"phonebook/pkg/config"
 )
 
 func Set() {
