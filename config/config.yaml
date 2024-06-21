@@ -6,8 +6,8 @@ server:
   port: "8080"
 
 db:
-  username: "phonebook"
-  password: "phonebook"
+  username: "root"
+  password: "root"
   host: "localhost"
   port: "3306"
   name: "phonebook_db"
