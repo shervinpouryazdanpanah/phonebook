@@ -6,9 +6,8 @@ import (
 )
 
 func Routes(e *echo.Echo) {
-
-	e.Group("/user")
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "user get")
+	g := e.Group("/phone")
+	g.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "phone get")
 	})
 }
