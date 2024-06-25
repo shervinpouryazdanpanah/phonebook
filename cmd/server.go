@@ -2,20 +2,18 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	"log"
 	"phonebook/pkg/bootstrap"
 )
 
-func Execute() {
-	root := &cobra.Command{
-		Use:     "Phonebook",
-		Short:   "serve the Phone Book",
-		Version: "0.1",
-	}
+var serveCmd = &cobra.Command{
+	Use:   "serve",
+	Short: "Serve app on dev server",
+	Long:  "Application will be served on host and port defined in config.yml file",
+	Run: func(cmd *cobra.Command, args []string) {
+		bootstrap.Server()
+	},
+}
 
-	bootstrap.Server()
-
-	if err := root.Execute(); err != nil {
-		log.Fatal(err)
-	}
+func init() {
+	rootCmd.AddCommand(serveCmd)
 }
