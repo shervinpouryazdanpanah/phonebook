@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	"phonebook/internal/database"
+	"phonebook/internal/database/migration"
 )
 
 var migrationCmd = &cobra.Command{
@@ -10,7 +10,7 @@ var migrationCmd = &cobra.Command{
 	Short: "Table migration",
 	Long:  "All tables will be migrated on username, password, host and port defined in config.yml ",
 	Run: func(cmd *cobra.Command, args []string) {
-		database.Migration()
+		migration.Migration()
 	},
 }
 
