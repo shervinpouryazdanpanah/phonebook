@@ -6,8 +6,8 @@ import (
 )
 
 type Phone struct {
-	Number string
-	User   UserResponse.User
+	Number string            `json:"name" xml:"name"`
+	User   UserResponse.User `json:"user" xml:"user"`
 }
 
 type Phones struct {
