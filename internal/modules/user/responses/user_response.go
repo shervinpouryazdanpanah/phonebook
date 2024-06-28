@@ -6,9 +6,9 @@ import (
 )
 
 type User struct {
-	Username  string    `json:"username"`
-	Name      string    `json:"name"`
-	CreatedAt time.Time `json:"created_at"`
+	Username  string    `json:"username" xml:"username"`
+	Name      string    `json:"name" xml:"name"`
+	CreatedAt time.Time `json:"created_at" xml:"created_at"`
 }
 
 func ToUser(user userModel.User) User {
