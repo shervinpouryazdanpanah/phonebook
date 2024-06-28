@@ -19,17 +19,35 @@ func Seed() {
 
 	user := userModel.User{
 		Username: "admin",
+		Name:     "admin",
 		Password: string(hashedPassword),
-	}
-
-	phone := phoneModel.Phone{
-		User:  user,
-		Phone: "09381584207",
 	}
 
 	db.Create(&user)
 	log.Print("Successfully created user")
+
+	phone := phoneModel.Phone{
+		User:   user,
+		Number: "09381584207",
+	}
+
 	db.Create(&phone)
 	log.Print("Successfully created phone")
+
+	phone2 := phoneModel.Phone{
+		User:   user,
+		Number: "09102587628",
+	}
+
+	db.Create(&phone2)
+	log.Print("Successfully created phone2")
+
+	phone3 := phoneModel.Phone{
+		User:   user,
+		Number: "09388405367",
+	}
+
+	db.Create(&phone3)
+	log.Print("Successfully created phone2")
 
 }
