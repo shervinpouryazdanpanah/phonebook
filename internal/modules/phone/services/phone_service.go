@@ -32,7 +32,7 @@ func (phoneService *PhoneService) GetPhone(id int) responses.Phone {
 	return responses.ToPhone(phone)
 }
 
-func (phoneService *PhoneService) Create(phoneRequest phone.StoreRequest, userId int) responses.Phone {
+func (phoneService *PhoneService) CreatePhone(phoneRequest phone.StoreRequest, userId int) responses.Phone {
 	var model phoneModel.Phone
 	model.UserId = userId
 	model.Number = phoneRequest.Number
